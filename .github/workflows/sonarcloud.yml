@@ -9,6 +9,10 @@ on:
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
+<<<<<<< HEAD
+=======
+
+>>>>>>> 769febe40fb6bafce3cfd89bdd7bb86a8e8023ba
     steps:
       - uses: actions/checkout@v4
 
@@ -16,3 +20,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 769febe40fb6bafce3cfd89bdd7bb86a8e8023ba
