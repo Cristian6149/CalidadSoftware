@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never2.0Store</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      .tableModal {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .thModal, .tdModal {
+        width: 150px; /* Establecer el ancho deseado para las celdas */
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+        /* Estilo para la ventana modal */
+        .modal{
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Estilo para el contenido de la ventana modal */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 140%;
+          max-width: 800px;
+        }
+        .closee{
+            margin-left: 22%;
+            margin-top: 3%;
+        }
+        
+        /* Estilo para el botón de cierre de la ventana modal */
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+         /* Estilo para la ventana modal */
+        .modal2 {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Estilo para el contenido de la ventana modal */
+        .modal-content2 {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          width: 80%;
+          max-width: 590px;
+        }
+        .closee2{
+            margin-left: 22%;
+            margin-top: 3%;
+        }
+        
+        /* Estilo para el botón de cierre de la ventana modal */
+        .close2 {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .close2:hover,
+        .close2:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+         /* Estilo para la ventana modal */
+         .modal3 {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Estilo para el contenido de la ventana modal */
+        .modal-content3 {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          max-width: 400px;
+        }
+        .closee3{
+            margin-left: 22%;
+            margin-top: 3%;
+        }
+        
+        /* Estilo para el botón de cierre de la ventana modal */
+        .close3 {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .close3:hover,
+        .close3:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+         /* Estilo para la ventana modal */
+         .modal4 {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Estilo para el contenido de la ventana modal */
+        .modal-content4 {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          max-width: 400px;
+        }
+        .closee4{
+            margin-left: 22%;
+            margin-top: 3%;
+        }
+        
+        /* Estilo para el botón de cierre de la ventana modal */
+        .close4 {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .close4:hover,
+        .close4:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+
+          /* Estilo para la ventana modal */
+          .modal5 {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Estilo para el contenido de la ventana modal */
+        .modal-content5 {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          max-width: 400px;
+        }
+        .closee5{
+            margin-left: 22%;
+            margin-top: 3%;
+        }
+        
+        /* Estilo para el botón de cierre de la ventana modal */
+        .close5 {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .close5:hover,
+        .close5:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+         /* Estilo para la ventana modal */
+         .modal6 {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Estilo para el contenido de la ventana modal */
+        .modal-content6 {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          max-width: 400px;
+        }
+        .closee6{
+            margin-left: 22%;
+            margin-top: 3%;
+        }
+        
+        /* Estilo para el botón de cierre de la ventana modal */
+        .close6 {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .close6:hover,
+        .close6:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .tag-input {
+          /* Aquí puede agregar los estilos que desee */
+          padding: 5px;
+          font-size: 14px;
+          border: 1px solid #ccc;
+          outline: none;
+        }
+        /*ICONO TEXTO INFORMATIVO*/
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+  }
+  
+  .icono {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .texto {
+    position: absolute;
+    top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 2; /* Valor alto para que esté por encima de otros elementos */
+
+  }
+  .modificar{
+    background: green;
+    color: white;
+  }
+  .eliminar{
+    background-color: red;
+    color: white;
+  }
+ .qr{
+    background-color: blue;
+    color: white;
+  }
+  
+  .icono:hover .texto {
+    display: block;
+  }
+  .texto:hover{
+    visibility: hidden;
+  }
+  
+  /*FIN ICONO TEXTO INFORMATIVO*/
+  /*ESTE ES EL SCROL DE ALMACEN*/
+  .chat-container {
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 0px 1.5rem;
+    max-width: 4900px;
+}
+    .chat-container th{
+      position: sticky; 
+    top: 0px;
+     }
+      </style>
+
+</head>
+<body >
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+   <div id="app" >
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="cloud" name="cloud-outline"></ion-icon>
+                <span>NeverStore2.0</span>
+            </div>
+        </div>
+
+        <nav class="navegacion ">
+            <ul>
+                <li @click="section='home'">
+                    <a id="inbox" href="#">
+                        <ion-icon name="mail-unread-outline"></ion-icon>
+                        <span class="oculto">Home</span>
+                    </a>
+                </li>
+                <li @click="section='vender'">
+                    <a href="#">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Vender</span>
+                    </a>
+                </li>
+                <li @click="section='ventas'">
+                    <a href="#">
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                        <span>Ventas</span>
+                    </a>
+                </li>
+                <li @click="section='almacen'">
+                    <a href="#">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                        <span>almacen</span>
+                    </a>
+                </li>
+                <li @click="section='caja'">
+                  <a href="#">
+                    <ion-icon name="card-outline"></ion-icon>
+                      <span>caja</span>
+                  </a>
+              </li>
+              <li @click="section='movimientos'">
+                <a href="#">
+                  <ion-icon name="calculator-outline"></ion-icon>
+                    <span>movimientos</span>
+                </a>
+            </li>
+                <li @click="section='cuentas'">
+                    <a href="#">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                        <span>Cuentas</span>
+                    </a>
+                </li>
+                <li @click="section='balance'">
+                    <a href="#">
+                        <ion-icon name="alert-circle-outline"></ion-icon>
+                        <span>Balance</span>
+                    </a>
+                </li>
+                <li  @click="section='inmuebles'">
+                    <a href="#">
+                      <ion-icon name="document-text-outline"></ion-icon>
+                        <span>Inmuebles</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+            <div class="modo-oscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Drak Mode</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="usuario">
+                <img src="" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">cristian</span>
+                        <span class="email">cris050503@gmail.com</span>
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <main >
+        <div v-show="section=='home'" id="home"></div>
+        <div v-show="section=='vender'">
+           <ventas></ventas>
+        </div>
+        <div v-show="section=='ventas'">
+            <vista_ventas></vista_ventas>
+        </div>
+        <div v-show="section=='almacen'">
+            <almacen></almacen>
+        </div>
+        <div v-show="section=='caja'">
+          <caja></caja>
+       </div>
+       <div v-show="section=='movimientos'">
+        <movimientos></movimientos>
+     </div>
+        <div v-show="section=='cuentas'">
+            <cuentas></cuentas>
+        </div>
+        <div v-show="section=='balance'">
+            <balancegeneral></balancegeneral>
+        </div>
+        <div v-show="section=='inmuebles'">
+            <inmuebles></inmuebles>
+        </div>
+        
+        
+    </main>    
+</div>
+<script src="./store.js"></script>
+<script src="./JsBarcode.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./components/venta.js"></script>
+    <script src="./components/vistaVenta.js"></script>
+    <script src="./components/almacen.js"></script>
+    <script src="./components/balanceGeneral.js"></script>
+    <script src="./components/cuentasBancarias.js"></script>
+    <script src="./components/inmuebles.js"></script>
+    <script src="./components/caja.js"></script>
+    <script src="./components/movimientos.js"></script>
+    <script>     
+      function validations(){
+	return {
+		products:[
+			function nameUnique( state , value ) {
+				if(!state.products) return true
+				let nombresProducts = value.map(i => i.name)
+				let names = new Set( nombresProducts )
+				if(names.size < nombresProducts.length){
+					return 'Ya existe un producto con ese nombre'
+				}
+				return true
+			}
+		
+			,
+			function naturalNumber( state , value ) {
+				if(!state.products) return true
+				for(let producto of value){
+					if( +producto.price < 0 ){
+						return 'Los valores de precio no pueden ser negativos: '+producto.price
+					}
+	
+				}
+				return true
+			}
+		]
+	}
+}
+      
+        createStore( validations())
+         const app = new Vue({
+        el:"#app",
+        data:{
+            section:'home',
+            VENTASREALIZADAS:[]
+        },
+        methods:{
+            }
+        }
+    )
+    </script>
+    <script>
+        // Función para abrir la ventana modal
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+      
+        // Función para cerrar la ventana modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        function openModal2() {
+          document.getElementById("myModal2").style.display = "block";
+        }
+      
+        // Función para cerrar la ventana modal
+        function closeModal2() {
+          document.getElementById("myModal2").style.display = "none";
+        }
+
+        function openModal3() {
+          document.getElementById("myModal3").style.display = "block";
+        }
+      
+        // Función para cerrar la ventana modal
+        function closeModal3() {
+          document.getElementById("myModal3").style.display = "none";
+        }
+
+        function openModal4() {
+          document.getElementById("myModal4").style.display = "block";
+        }
+      
+        // Función para cerrar la ventana modal
+        function closeModal4() {
+          document.getElementById("myModal4").style.display = "none";
+        }
+
+        function openModal5() {
+          document.getElementById("myModal5").style.display = "block";
+        }
+      
+        // Función para cerrar la ventana modal
+        function closeModal5() {
+          document.getElementById("myModal5").style.display = "none";
+        }
+
+        function openModal6() {
+          document.getElementById("myModal6").style.display = "block";
+        }
+      
+        // Función para cerrar la ventana modal
+        function closeModal6() {
+          document.getElementById("myModal6").style.display = "none";
+        }
+        var cambiarColor =document.getElementById("ventasTotales").innerText.trim().match('/\d+/');
+        console.log(cambiarColor)
+        if(cambiarColor==='12'){
+          document.getElementById("luzBalance").style.background="red"
+        }else{
+          document.getElementById("luzBalance").style.background="green"
+        }
+
+        //target cmponente vender
+        let tags=[]
+        let ulModify=document.getElementById("id1")
+        let inputModify=document.getElementById("id2")
+        let removeTags=document.getElementById("botonRemove")
+
+        function addLi(data){
+          //ulModify.querySelectorAll("li").forEach(li=>{li.remove()})
+          console.log("desde addLi ->",data)
+          //let li=document.createElement("li")
+          //li.textContent(data)
+          //`<li>${data} <i class="uit uit-multiply" onclick="remove(this, '${data}')"></i></li>`;
+          //let liTag="<li>xD</li>"
+          //ulModify.insertAdjacentHTML("beforeend","<li>xD</li>")
+          //tags.reverse().forEach(res=>{
+            ulModify.insertAdjacentHTML("afterbegin",`<li>${data} <i class="uit uit-multiply"></i></li>`)
+            inputModify.value=""
+            app.$children[0].getProductosBuscar(data);
+          //})
+          
+
+
+        }
+        function addTarget(e){
+          if(e.key=="Enter"){       
+            if( e.target.value.replace(/\s+/g, ' ').length > 0){
+              e.target.value.replace(/\s+/g, ' ').split(',').forEach(e=>{
+                 if(!tags.includes(e)){
+                  console.log("entrando a forEach")
+                  tags.push(e)
+                  addLi(e)
+                 }                
+              })
+            }
+          }
+        }
+        inputModify.addEventListener("keyup",addTarget);
+
+        ulModify.addEventListener("click", function(event) {
+          //console.log("evento completo->",event)  
+          //console.log("evento target->",event.target) 
+          //console.log("evento target tagName->",event.target.tagName)
+          //console.log("evento target nodeName->",event.target.nodeName)
+          //console.log("evento target parentNode->",event.target.parentNode)
+          
+                  if (event.target.tagName === "I") {
+                 console.log("ver data completo->",app.$children[0].productosDisponibles)
+                 let data=event.target.parentNode.textContent
+                 //console.log("ver el data -> ",data)
+                 let searchRegex = new RegExp(data, 'i');
+                 let objetosConCoincidencia = app.$children[0].productosDisponibles.filter(objeto => !searchRegex.test(objeto.name)); 
+                 console.log("coinsidencias ->",objetosConCoincidencia)           
+                 app.$children[0].productosDisponibles=objetosConCoincidencia;
+                 event.target.parentNode.remove(); 
+                 console.log(data)
+                 tags=tags.filter(e=> e!==data.trim())
+                 console.log(tags)
+                 }
+          });
+          removeTags.addEventListener("click",function(event){
+            console.log("botonRemove",ulModify)
+            var elementosLi = ulModify.getElementsByTagName("li");
+            var input = ulModify.querySelector("input");
+
+                // Iterar sobre los elementos LI y eliminarlos excepto el input
+                for (var i = elementosLi.length - 1; i >= 0; i--) {
+                    var elementoLi = elementosLi[i];
+                    // Verificar si el elementoLi no es el input
+                    if (elementoLi !== input) {
+                      ulModify.removeChild(elementoLi);
+                    }
+                }
+                tags=[]
+                app.$children[0].productosDisponibles=[];
+          })
+
+
+          /*input de venta */
+            // Obtener el input por su ID
+        var inputNumero = document.getElementById("dataCantidad");
+
+            // Agregar un evento cuando se presiona una tecla
+            /* inputNumero.addEventListener("keydown", function(event) {
+                // Verificar si la tecla presionada es la flecha hacia arriba (keyCode 38) o hacia abajo (keyCode 40)
+                if (event.keyCode === 38) {
+                    console.log("Flecha hacia arriba presionada");
+                    // Aquí puedes realizar acciones adicionales
+                } else if (event.keyCode === 40) {
+                    console.log("Flecha hacia abajo presionada");
+                    // Aquí puedes realizar acciones adicionales
+                }
+            }); */
+       
+        </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt de Contraseña</title>
+    <style>
+        button {
+            font-family: Arial, sans-serif;
+            display:grid;
+            align-items:center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+          
+        }
+        .container {
+  display: flex;
+  background: red;
+}
+    </style>
+</head>
+<div class="container">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div>
+<body>
+
+<script>
+    function getPassword() {
+        var password = prompt("Ingrese su contraseña:");
+        if (password === null) {
+            // El usuario hizo clic en "Cancelar"
+            alert("Operación cancelada");
+        } else {
+            // Aquí puedes realizar alguna acción con la contraseña ingresada
+            alert("Contraseña ingresada: " + password);
+        }
+    }
+</script>
+
+<button onclick="getPassword()">Ingresar Contraseña</button>
+
+</body>
+</html>
